@@ -12,7 +12,7 @@ Y=2
 #Day
 D=8
 #FILE
-FILE="dot_vasd.txt"
+FILE="ou2.txt"
 
 while [ $H -le 14 ]; do
 	H=`echo "$H + 1"| bc`
