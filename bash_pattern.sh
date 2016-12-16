@@ -15,7 +15,6 @@ D=8
 FILE="ou2.txt"
 
 while [ $H -le 14 ]; do
-	H=`echo "$H + 1"| bc`
 	#If time less than 10, append 0. eg:- 1 -> 01
 	if [ $H -lt 10 ]; then
 			H=$(printf "%02d" $H)
@@ -34,4 +33,5 @@ while [ $H -le 14 ]; do
 		X=`echo "$X + 2"| bc`
 		Y=`echo "$Y + 2"| bc`
 	done
+	H=`echo "$H + 1"| bc`
 done
