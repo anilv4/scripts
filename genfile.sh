@@ -42,7 +42,6 @@ while true; do
         sleep $WAIT_1
         let "NUM+=1"
         let "RUN_NUM+=1"
-        echo $NUM
         if [ $NUM -eq $FILE_COUNT ]; then
                 NUM=0
                 rm -rv ${FILE_LOCATION}/file_*
