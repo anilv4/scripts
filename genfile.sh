@@ -5,6 +5,7 @@
 ##
 
 ## TO START
+# curl https://raw.githubusercontent.com/anilv4/scripts/master/genfile.sh -o /root/genfile.sh
 # chmod 755 genfile.sh
 # nohup ./genfile.sh&
 
