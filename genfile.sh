@@ -44,7 +44,7 @@ while true; do
         let "RUN_NUM+=1"
         if [ $NUM -eq $FILE_COUNT ]; then
                 NUM=0
-                rm -rv ${FILE_LOCATION}/file_*
+                rm -rf ${FILE_LOCATION}/file_*
                 sleep $WAIT_2
         fi
         echo -e "Date is $DATE\nRun - $RUN_NUM" > ${LOG_FILE}
