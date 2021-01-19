@@ -2,6 +2,7 @@
 
 ##
 # ONLY FOR TESTING IN LAB
+# version 1.01
 # genfile.sh will create 1MiB files in a directory and delete those files in a loop based on FILE_COUNT
 ##
 
