@@ -2,6 +2,7 @@
 
 ##
 # ONLY FOR TESTING IN LAB
+# genfile.sh will create 1MiB files in a directory and delete those files in a loop based on FILE_COUNT
 ##
 
 ## TO START
@@ -16,20 +17,27 @@
 ## TO STOP
 # pkill -e genfile
 
+#General configs
 FILE_LOCATION="/root/test_files/"
-NUM=0 #File number
-FILE_COUNT=1024
 LOG_FILE="/root/genfile.log"
+FILE_COUNT=1024 #Max number of 1MiB files to reach before delete
 
+##dd configs
 BS=2 #BLOCK SIZE for dd
 COUNT=512 #COUNT for dd
+DD_STATUS="none"
+
+#sleep configs
 WAIT_1=".002" #2ms
 WAIT_2=1
+
+#No need to change
+NUM=0 #File number
 RUN_NUM=1 #Run counter
 
 while true; do
         [ -d $FILE_LOCATION ] || mkdir -p "$FILE_LOCATION"
-        dd status=none if=/dev/zero of="${FILE_LOCATION}/file_${NUM}.out" bs=${BS}k count=512
+        dd status=$DD_STATUS if=/dev/zero of="${FILE_LOCATION}/file_${NUM}.out" bs=${BS}k count=$COUNT
         DATE=`date +%D_%T`
         sleep $WAIT_1
         let "NUM+=1"
