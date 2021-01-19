@@ -9,6 +9,10 @@
 # chmod 755 genfile.sh
 # nohup ./genfile.sh&
 
+## Status check
+# cat /root/genfile.log
+# ls /root/test_files
+
 ## TO STOP
 # pkill -e genfile
 
