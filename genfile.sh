@@ -5,7 +5,7 @@
 # genfile.sh will create 1MiB files in a directory and delete those files in a loop based on FILE_COUNT
 ##
 
-## TO START
+## To start
 # curl https://raw.githubusercontent.com/anilv4/scripts/master/genfile.sh -o /root/genfile.sh
 # chmod 755 genfile.sh
 # nohup ./genfile.sh&
@@ -14,24 +14,24 @@
 # cat /root/genfile.log
 # ls /root/test_files
 
-## TO STOP
+## TO stop
 # pkill -e genfile
 
-#General configs
+# General configs
 FILE_LOCATION="/root/test_files/"
 LOG_FILE="/root/genfile.log"
 FILE_COUNT=1024 #Max number of 1MiB files to reach before delete
 
-##dd configs
+## dd configs
 BS=2 #BLOCK SIZE for dd
 COUNT=512 #COUNT for dd
 DD_STATUS="none"
 
-#sleep configs
+## sleep configs
 WAIT_1=".002" #2ms
 WAIT_2=1
 
-#No need to change
+# No need to change
 NUM=0 #File number
 RUN_NUM=1 #Run counter
 
