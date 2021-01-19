@@ -17,7 +17,7 @@
 ## TO stop
 # pkill -e genfile
 
-# General configs
+## General configs
 FILE_LOCATION="/root/test_files/"
 LOG_FILE="/root/genfile.log"
 FILE_COUNT=1024 #Max number of 1MiB files to reach before delete
@@ -31,7 +31,7 @@ DD_STATUS="none"
 WAIT_1=".002" #2ms
 WAIT_2=1
 
-# No need to change
+## No need to change
 NUM=0 #File number
 RUN_NUM=1 #Run counter
 
