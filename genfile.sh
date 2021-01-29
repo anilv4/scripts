@@ -39,7 +39,7 @@ RUN_NUM=1 #Run counter
 while true; do
         [ -d $FILE_LOCATION ] || mkdir -p "$FILE_LOCATION"
         dd status=$DD_STATUS if=/dev/zero of="${FILE_LOCATION}/file_${NUM}.out" bs=${BS}k count=$COUNT
-        DATE=`date +%D_%T`
+        DATE=`date +%F_%T`
         sleep $WAIT_1
         let "NUM+=1"
         let "RUN_NUM+=1"
