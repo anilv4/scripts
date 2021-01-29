@@ -2,7 +2,7 @@
 
 ##
 # ONLY FOR TESTING IN LAB
-# version 1.03
+# version 1.04
 # genfile.sh will create 1MiB files in a directory and delete those files in a loop based on FILE_COUNT
 ##
 
@@ -48,5 +48,5 @@ while true; do
                 rm -rf ${FILE_LOCATION}/file_*
                 sleep $WAIT_2
         fi
-        echo -e "Date is $DATE\nRun - $RUN_NUM" > ${LOG_FILE}
+        echo -e "Date: $DATE\nFile creation counter: $RUN_NUM" > ${LOG_FILE}
 done
