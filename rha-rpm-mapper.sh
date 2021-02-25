@@ -2,7 +2,7 @@
 
 ##
 # FOR TESTING PURPOSE ONLY.
-# version 1.01
+# version 1.02
 # rh-rpm-mapper.sh will map a RH advisory to a rpm. The output will be saved in csv format.
 # curl https://raw.githubusercontent.com/anilv4/scripts/master/rha-rpm-mapper.sh -o rha-rpm-mapper.sh
 # ./rha-rpm-mapper.sh <RHA_CSV_FILE.csv>
