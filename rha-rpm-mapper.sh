@@ -13,7 +13,7 @@
 SEC_CSV_FILE="$1"
 UPDATEINFO_FILE="updateinfo_`date +%F`.txt"
 OUTPUT_FILE="rha_to_rpm_`date +%F_%T`.csv"
-MISSING_FILE="missing_rha_to_rpm`date +%F_%T`.csv"
+MISSING_FILE="missing_rha_to_rpm_`date +%F_%T`.csv"
 
 echo -e "\nGenerating update info file: $UPDATEINFO_FILE"
 yum updateinfo list all > $UPDATEINFO_FILE
