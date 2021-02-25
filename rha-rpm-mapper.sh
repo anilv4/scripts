@@ -4,7 +4,7 @@
 # FOR TESTING PURPOSE ONLY.
 # version 1.01
 # rh-rpm-mapper.sh will map a RH advisory to a rpm. The output will be saved in csv format.
-# ./rh-rpm-mapper.sh <RHA_CSV_FILE.csv>
+# ./rha-rpm-mapper.sh <RHA_CSV_FILE.csv>
 ##
 
 [ -z "$1" ] && { echo -e "\nSecurity CSV file missing"; exit 1; }
