@@ -30,4 +30,3 @@ if [ -f "$TMPFILE" ]; then
 	fi
 	rm -f $TMPFILE
 fi
-[root
