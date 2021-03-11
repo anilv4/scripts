@@ -2,7 +2,7 @@
 
 ###
 # FOR TESTING PURPOSE ONLY
-# 
+# v1.02 
 # This script will download a configuration file and then compare that with a local file in the system.
 # If there is a change, the local file will be replaced by the downloaded file.
 # 
@@ -11,7 +11,7 @@
 # ./compare.sh
 ###
 
-SRCURL="http://example.com/file/sysctl.conf.kvm"
+SRCURL="http://file.pnq.redhat.com/avettath/satdemo/sysctl.conf.oracledb"
 LOCALFILE="/etc/sysctl.conf"
 
 TMPFILE="/tmp/deployfile.${RANDOM}"
@@ -23,6 +23,8 @@ if [ -f "$TMPFILE" ]; then
 	if `cmp -s "$TMPFILE" "$LOCALFILE"`; then
 		echo ""$TMPFILE" is same as "$LOCALFILE""
 	else
+		echo "Taking backup of $LOCALFILE"
+		cp -fv "$LOCALFILE" "${LOCALFILE}_`date +%F-%T`"
 		cp -f "$TMPFILE" "$LOCALFILE"
 		echo ""$LOCALFILE" is replaced by "$TMPFILE""
 	fi
