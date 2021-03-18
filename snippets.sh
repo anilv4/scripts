@@ -5,8 +5,8 @@
 
 # Parsing json using jq
 for i in `ls ${LOC}/json/*json`; do
-  # jq to query json
-  VALUES=`jq -r '.[0]| select(.isActive==true)|"\(.totalCost) \(.currentValue)"' $i`
+  # jq to do a conditional query with two conditions
+  VALUES=`jq -r '.[]| select(.isActive==true and .assetClass=="Total")|"\(.totalCost) \(.currentValue)"' $i`
   # basename needs xargs. 
   # echo $i | cut -d\- -f1,2,3 # for reference 
   DATE=`echo $i | xargs basename | awk -F"-" '{print $1 "/" $2 "/" $3}'`
